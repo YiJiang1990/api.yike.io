@@ -42,6 +42,7 @@ Route::post('comments/{comment}/cancel-vote', 'CommentController@cancelVote');
 
 Route::post('notifications/mark-all-as-read', 'NotificationController@markAllAsRead')
             ->name('notifications.mark_all_as_read');
+//Route::post('upload/img')
 
 // Resources
 Route::resources([
