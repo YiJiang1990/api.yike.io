@@ -12,10 +12,13 @@ class NodeTableSeeder extends Seeder
     public function run()
     {
 
-        $arr = [
-            ['title' => '医学','description' => 'description'],
-            ['title' => '心血管','node_id' => 1,'description' => 'description']
+        $arr = ['threads_count' => 0,'subscribers_count' => 0];
+
+
+        $insert = [
+            ['title' => '医学','description' => 'description', 'cache' => json_encode($arr)],
+            ['title' => '心血管','description' => 'description', 'cache' => json_encode($arr)]
         ];
-        \App\Node::insert($arr);
+        \App\Node::insert($insert);
     }
 }
